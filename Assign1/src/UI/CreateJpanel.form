@@ -258,6 +258,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Select"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jSelectActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTeamInfo1">
     </Component>

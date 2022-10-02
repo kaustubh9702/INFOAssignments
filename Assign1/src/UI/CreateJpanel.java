@@ -4,7 +4,19 @@
  */
 package UI;
 
+import Model.Employee;
 import Model.EmployeeHistory;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JLabel;
 
 /**
  *
@@ -98,6 +110,11 @@ public class CreateJpanel extends javax.swing.JPanel {
         lbSelectPhoto.setText("Select Photo");
 
         jSelect.setText("Select");
+        jSelect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSelectActionPerformed(evt);
+            }
+        });
 
         jSave.setText("Save");
         jSave.addActionListener(new java.awt.event.ActionListener() {
@@ -209,8 +226,43 @@ public class CreateJpanel extends javax.swing.JPanel {
 
     private void jSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSaveActionPerformed
         // TODO add your handling code here:
+        String name = txtName.getText();
+        String gender = txtGender.getText();
+        int ID = Integer.parseInt(txtID3.getText());
+        int contact = Integer.parseInt(txtContactNo.getText());
+        String team = txtTeamInfo1.getText();
+        String startDate = txtStartdate1.getText();
+        String level = txtLevel.getText();
+        String email = txtEmail.getText();
+        int age = Integer.parseInt(txtAge.getText());
         
+        Employee ep = employee.addNewEmployeeHistory();
+        ep.setAge(age);
+        ep.setEmail(email);
+        ep.setEmployee_ID(ID);
+        ep.setGender(gender);
+        ep.setLevel(level);
+        ep.setName(name);
+        ep.setNumber(contact);
+        ep.setStartDate(startDate);
+        ep.setTeam(team);
+        
+        JOptionPane.showMessageDialog(this, "New Employee added.");
+        
+        txtName.setText("");
+        txtGender.setText("");
+        txtID3.setText("");
+        txtContactNo.setText("");
+        txtTeamInfo1.setText("");
+        txtStartdate1.setText("");
+        txtLevel.setText("");
+        txtEmail.setText("");
+        txtAge.setText("");
     }//GEN-LAST:event_jSaveActionPerformed
+
+    private void jSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSelectActionPerformed
+        
+    }//GEN-LAST:event_jSelectActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -26,5 +26,29 @@ public class EmployeeHistory {
         this.history = history;
     }
     
+    public Employee addNewEmployeeHistory(){
+        Employee employee = new Employee();
+        history.add(employee);
+        return employee;
+    }
+    
+    public void deleteEmployee(Employee em){
+        history.remove(em);
+    }
+    Employee employee;
+    public Employee searchEmployee(Employee e){
+        
+        for(Employee em : history){
+            if(em.getEmployee_ID() == e.getEmployee_ID()){
+                employee = em;
+                break;
+            }else{
+                return null;
+            }
+        }
+        return employee;
+      
+    }
+    
     
 }

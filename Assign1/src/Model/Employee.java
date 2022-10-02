@@ -11,17 +11,31 @@ import java.io.File;
  * @author kaustubh
  */
 public class Employee {
-    private String name;
+    public String name;
     private int number;
     private String email;
     private int employee_ID;
     private int age;
     private String gender;
-    private int startDate;
+    private String startDate;
     private String level;
     private String team;
     private File mProfileLocation;
     private String positionTitle;
+    
+    
+    public boolean validateName() {
+        return isNotNull(name) && !name.isEmpty() && name.matches("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$");
+    }
+    public boolean validateEmail() {
+        String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+        return isNotNull(email) && !email.isEmpty() && email.matches(regex);
+    }
+    
+     public boolean validateDOB() {
+        return isNotNull(startDate);
+    }
+     
 
     public String getPositionTitle() {
         return positionTitle;
@@ -80,11 +94,11 @@ public class Employee {
         this.gender = gender;
     }
 
-    public int getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(int startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
@@ -111,4 +125,14 @@ public class Employee {
     public void setmProfileLocation(File mProfileLocation) {
         this.mProfileLocation = mProfileLocation;
     }
+
+    private boolean isNotNull(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    @Override
+    public String toString(){
+        return name;
+    } 
+            
 }

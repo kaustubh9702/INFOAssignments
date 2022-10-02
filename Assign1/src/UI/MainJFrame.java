@@ -36,6 +36,7 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanel = new javax.swing.JPanel();
         CREATE = new javax.swing.JButton();
         VIEW = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,27 +49,44 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         VIEW.setText("VIEW");
+        VIEW.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VIEWActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("SERCH DIRECTORY");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                .addGap(0, 28, Short.MAX_VALUE)
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addComponent(VIEW, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addComponent(CREATE)))
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(controlPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(VIEW, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(CREATE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
+                .addGap(103, 103, 103)
                 .addComponent(CREATE)
-                .addGap(77, 77, 77)
+                .addGap(75, 75, 75)
                 .addComponent(VIEW)
-                .addContainerGap(377, Short.MAX_VALUE))
+                .addGap(64, 64, 64)
+                .addComponent(jButton1)
+                .addContainerGap(392, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -77,11 +95,11 @@ public class MainJFrame extends javax.swing.JFrame {
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 695, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
 
         splitPane.setRightComponent(workArea);
@@ -107,6 +125,19 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPane.setRightComponent(cp);
         
     }//GEN-LAST:event_CREATEActionPerformed
+
+    private void VIEWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VIEWActionPerformed
+        // TODO add your handling code here:
+         ViewJPanel cp = new ViewJPanel(employee);
+        splitPane.setRightComponent(cp);
+        
+    }//GEN-LAST:event_VIEWActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        SearchJpanel sp = new SearchJpanel();
+        splitPane.setRightComponent(sp);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,6 +178,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton CREATE;
     private javax.swing.JButton VIEW;
     private javax.swing.JPanel controlPanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables

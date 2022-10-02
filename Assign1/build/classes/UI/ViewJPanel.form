@@ -35,26 +35,33 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lbName" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="lbEmailAddress" min="-2" pref="110" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="lbTeaminfo1" min="-2" pref="81" max="-2" attributes="0"/>
-                                                  <Component id="lbContactNo" min="-2" pref="81" max="-2" attributes="0"/>
-                                                  <Component id="lbLevel" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
-                                                  <Component id="lbstartDate" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
-                                                  <Component id="lbAge" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
-                                                  <Component id="lbGender" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
-                                                  <Component id="lbID" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lbEmailAddress" min="-2" pref="110" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="lbTeaminfo1" min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="lbContactNo" min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="lbLevel" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="lbstartDate" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="lbAge" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="lbGender" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="lbID" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lbPos" min="-2" pref="110" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtPos" min="-2" pref="154" max="-2" attributes="0"/>
                                           <Component id="txtContactNo" min="-2" pref="154" max="-2" attributes="0"/>
                                           <Component id="txtEmail" min="-2" pref="154" max="-2" attributes="0"/>
                                           <Component id="txtTeamInfo1" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
@@ -138,7 +145,12 @@
                   <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbPos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPos" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -371,6 +383,17 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbPos">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Position Title"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtPos">
     </Component>
   </SubComponents>
 </Form>

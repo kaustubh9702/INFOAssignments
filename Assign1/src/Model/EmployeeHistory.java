@@ -41,9 +41,8 @@ public class EmployeeHistory {
         for(Employee em : history){
             if(em.getEmployee_ID() == e.getEmployee_ID()){
                 employee = em;
-                break;
             }else{
-                return null;
+                employee = null;
             }
         }
         return employee;

@@ -67,6 +67,7 @@ public class SearchJpanel extends javax.swing.JPanel {
         lbDirectory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbDirectory.setText("EMPLOYEE DIRECTORY");
 
+        jButton1.setFont(new java.awt.Font("Imprint MT Shadow", 0, 12)); // NOI18N
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +75,7 @@ public class SearchJpanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel1.setText("Search by ID");
 
         lbstartDate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -118,6 +120,7 @@ public class SearchJpanel extends javax.swing.JPanel {
         lbAge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbAge.setText("Age");
 
+        btnClear.setFont(new java.awt.Font("Imprint MT Shadow", 0, 12)); // NOI18N
         btnClear.setActionCommand("Clear");
         btnClear.setLabel("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
@@ -178,9 +181,9 @@ public class SearchJpanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(lbDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
+                .addComponent(lbDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(txtSearchID, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -191,7 +194,7 @@ public class SearchJpanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel1)))
-                .addContainerGap(444, Short.MAX_VALUE))
+                .addContainerGap(445, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(171, 171, 171)

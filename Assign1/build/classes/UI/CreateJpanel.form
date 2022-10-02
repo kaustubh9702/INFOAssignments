@@ -36,7 +36,6 @@
                                   <Component id="lbTeaminfo1" alignment="1" max="32767" attributes="0"/>
                                   <Component id="lbContactNo" alignment="1" max="32767" attributes="0"/>
                                   <Component id="lbEmailAddress" alignment="1" pref="110" max="32767" attributes="0"/>
-                                  <Component id="lbSelectPhoto" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -48,21 +47,17 @@
                                   <Component id="txtLevel" alignment="1" min="-2" pref="154" max="-2" attributes="0"/>
                                   <Component id="txtTeamInfo1" alignment="1" min="-2" pref="154" max="-2" attributes="0"/>
                                   <Component id="txtEmail" alignment="1" min="-2" pref="154" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jSelect" min="-2" pref="125" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
-                      <Component id="jSave" min="-2" pref="175" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="lbTitle" min="-2" pref="513" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+                      <Component id="jSave" min="-2" pref="175" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="49" max="32767" attributes="0"/>
@@ -72,7 +67,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="106" max="32767" attributes="0"/>
+              <EmptySpace pref="109" max="32767" attributes="0"/>
               <Component id="lbTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -130,14 +125,9 @@
                   <Component id="lbEmailAddress" min="-2" max="-2" attributes="0"/>
                   <Component id="txtEmail" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbSelectPhoto" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="jSelect" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jSave" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="58" max="32767" attributes="0"/>
+              <EmptySpace pref="118" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -233,15 +223,6 @@
         <Property name="text" type="java.lang.String" value="Email Address"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbSelectPhoto">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Select Photo"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="txtName">
     </Component>
     <Component class="javax.swing.JTextField" name="txtGender">
@@ -255,17 +236,6 @@
     <Component class="javax.swing.JTextField" name="txtStartdate1">
     </Component>
     <Component class="javax.swing.JTextField" name="txtLevel">
-    </Component>
-    <Component class="javax.swing.JButton" name="jSelect">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Imprint MT Shadow" size="12" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Select"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jSelectActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTeamInfo1">
     </Component>
